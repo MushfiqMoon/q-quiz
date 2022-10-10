@@ -12,7 +12,7 @@ const Header = () => {
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">
-                        <img src="./logo.png" width="50" alt="" srcset="" /> QUIZ
+                        <img src="./logo.png" width="50" alt="logo" /> QUIZ
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

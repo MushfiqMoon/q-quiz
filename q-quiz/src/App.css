@@ -1,3 +1,4 @@
+/* Menu */
 .q-header .menu {
     color: #fff;
     font-weight: bold;
@@ -6,6 +7,34 @@
 }
 
 .q-header .menu.active,
-.q-header .menu:hover{
+.q-header .menu:hover {
     color: #00b5ca;
+}
+
+/* Hero */
+.hero-textarea h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    /* .q-hero {
+        flex-direction: column-reverse;
+    } */
+
+    .hero-textarea h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .q-hero {
+        flex-direction: column-reverse;
+    }
+
+    .hero-textarea {
+        text-align: center;
+    }
+
 }
