@@ -2,6 +2,7 @@ import React from 'react'
 import {
     Container,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -14,11 +15,10 @@ const Footer = () => {
                 </a>
 
                 <ul className="nav col-md-4 justify-content-end">
-                    <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Home</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Features</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Pricing</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link px-2 text-white">FAQs</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link px-2 text-white">About</a></li>
+                    <li className="nav-item"><Link to="/" className="nav-link px-2 text-white">Home</Link></li>
+                    <li className="nav-item"><Link to="/topic" className="nav-link px-2 text-white">Topic</Link></li>
+                    <li className="nav-item"><Link to="/statistic" className="nav-link px-2 text-white">Statistic</Link></li>
+                    <li className="nav-item"><Link to="/blog" className="nav-link px-2 text-white">Blog</Link></li>
                 </ul>
             </footer>
         </Container>

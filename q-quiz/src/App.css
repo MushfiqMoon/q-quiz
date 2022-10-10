@@ -6,17 +6,17 @@
     padding: 10px 20px;
 }
 
-.q-header .menu.active,
-.q-header .menu:hover {
+/* .q-header .menu:hover, */
+.q-header .menu.active {
     color: var(--primary);
 }
 
 
 @media screen and (max-width: 992px) {
 
-    .hero-textarea h1 {
-        font-size: 30px;
-    }
+    .qt-hero {
+        font-size: 40px;
+      }
 
 }
 
@@ -25,6 +25,7 @@
     .q-hero {
         flex-direction: column-reverse;
     }
+    
 
     .hero-textarea {
         text-align: center;
