@@ -13,7 +13,7 @@ const ErrorPage = () => {
             {
                 error && (
                     <div className='text-center mt-3 pb-5'>
-                        <div className='fs-1 text-danger'>{error.status}</div>
+                        <div className='fs-1 fw-bold text-danger'>{error.status}</div>
                         <div className='fs-3'>{error.statusText || error.message}</div>
                     </div>
                 )
