@@ -18,12 +18,21 @@
     font-style: italic;
 }
 
+.q-hint {
+    font-size: 20px;
+    color: var(--primary);
+    float: right;
+}
+
+.q-hint:active {
+    transform: translateY(2px);
+}
 
 @media screen and (max-width: 992px) {
 
     .qt-hero {
         font-size: 40px;
-      }
+    }
 
 }
 
@@ -32,7 +41,7 @@
     .q-hero {
         flex-direction: column-reverse;
     }
-    
+
 
     .hero-textarea {
         text-align: center;
