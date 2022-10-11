@@ -25,7 +25,7 @@ const QuizItem = ({ data }) => {
 
     console.log(data)
     return (
-        <div className='p-4 bg-dark text-white rounded-4 shadow  mb-3 ' >
+        <div className='p-4 bg-white rounded-4 shadow  my-4' >
             <article>
                 <Row>
                     <Col xs={10}>
