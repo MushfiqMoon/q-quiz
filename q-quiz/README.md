@@ -9,3 +9,6 @@ Documentation Link -> [Link](https://react-bootstrap.netlify.app/)
 
 ## Font Open Sans
 Documentation Link -> [Link](https://fonts.google.com/)
+
+## Recharts v2.1.9
+Documentation Link -> [Link](https://recharts.org/en-US/)

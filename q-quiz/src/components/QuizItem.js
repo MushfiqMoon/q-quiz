@@ -15,9 +15,23 @@ const QuizItem = ({ data }) => {
 
     const { correctAnswer, id, options, question } = data;
 
+    const correctAns = () => toast.success("Your Answer Is Correct", {
+            position: "bottom-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    
+
+    console.log( riteCount)
+
     const notify = () => toast.success(correctAnswer, {
         position: "bottom-center",
-        autoClose: 800,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -26,19 +40,8 @@ const QuizItem = ({ data }) => {
         theme: "dark",
     });
 
-    const rightAns = () => {
 
-        toast.success("Your Answer Is Correct", {
-            position: "bottom-center",
-            autoClose: 800,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
-    }
+
 
     console.log(riteCount)
 
@@ -111,7 +114,7 @@ const QuizItem = ({ data }) => {
                         options.map((option, index) =>
                             <Col md={6} key={index}>
                                 <div className="q-radio-field">
-                                    <input className="op-1" type="radio" name="option" value={option} onChange={e => e.target.value === correctAnswer ? rightAns() : wrongAns()} />
+                                    <input className="op-1" type="radio" name="option" value={option} onChange={e => e.target.value === correctAnswer ? correctAns() : wrongAns()} />
                                     <label htmlFor="quiz">{option}</label>
                                 </div>
                             </Col>

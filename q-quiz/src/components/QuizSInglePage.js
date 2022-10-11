@@ -21,7 +21,7 @@ const QuizSInglePage = () => {
                         <img src={logo} alt="{name}" className='img-fluid'/>
                     </Col>
                     <Col md={9}>
-                        <h2 className='t-primary qt-hero mt-5'>{name}</h2>
+                        <h2 className='t-primary qt-hero mt-5'>{name} Quiz</h2>
                         <h5>Total Questions {total}</h5>
                         <hr/>
                     </Col>

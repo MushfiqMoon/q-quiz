@@ -35,13 +35,12 @@
     height: 100px;
     align-content: center;
     align-items: center;
-    margin-bottom: 30px;
     width: 100%;
     position: relative;
 }
 
 .q-radio-field input[type=radio] {
-    -webkit-appearance: none;
+    appearance: none;
     position: absolute;
     z-index: 0;
     width: 100%;
