@@ -7,29 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 
-const QuizItem = ({ data }) => {
+const QuizItem = ({ data, index }) => {
 
-    const [riteCount, setRiteCount] = useState(0)
-    const [WrongCount, setWrongCount] = useState(0)
+    const { correctAnswer, options, question } = data;
 
-    const { correctAnswer, id, options, question } = data;
-
-    const correctAns = () => toast.success("Your Answer Is Correct", {
-            position: "bottom-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
-    
-
-    console.log( riteCount)
-
-    const notify = () => toast.success(correctAnswer, {
+    const correctAns = () => toast.success("Your Answer Is Correct 👍", {
         position: "bottom-center",
         autoClose: 1000,
         hideProgressBar: false,
@@ -40,12 +24,7 @@ const QuizItem = ({ data }) => {
         theme: "dark",
     });
 
-
-
-
-    console.log(riteCount)
-
-    const wrongAns = () => toast.warning("Wrong Answer", {
+    const wrongAns = () => toast.warning("Wrong Answer 👎", {
         position: "bottom-center",
         autoClose: 800,
         hideProgressBar: false,
@@ -56,48 +35,23 @@ const QuizItem = ({ data }) => {
         theme: "dark",
     });
 
-    // console.log(data)
-
-
-
-
-    const handleCheck = e => {
-        let answer = e.target.value;
-
-        if (answer === correctAnswer) {
-            console.log('right')
-            const rightAns = () => toast.success("Your Answer Is Correct", {
-                position: "bottom-center",
-                autoClose: 800,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-        } else {
-            console.log('wrong')
-            const wrongAns = () => toast.warning("Wrong Answer", {
-                position: "bottom-center",
-                autoClose: 800,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-        }
-        // console.log(answer)
-
-    }
+    const notify = () => toast.info(correctAnswer, {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+    });
 
     return (
         <div className='p-4 bg-white rounded-4 shadow  my-4' >
             <article>
                 <Row>
                     <Col xs={10}>
+                        <span class="badge bg-info mb-2 fs-6">Quiz {index + 1}</span>
                         <div className='questions fs-4 fw-bold'
                             dangerouslySetInnerHTML={{ __html: question }}
                         />
@@ -108,7 +62,7 @@ const QuizItem = ({ data }) => {
                 </Row>
             </article>
 
-            <form className="donation-form" action="">
+            <div className="donation-form">
                 <Row>
                     {
                         options.map((option, index) =>
@@ -121,7 +75,7 @@ const QuizItem = ({ data }) => {
                         )
                     }
                 </Row>
-            </form>
+            </div>
             <ToastContainer />
 
         </div>

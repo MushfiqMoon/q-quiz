@@ -11,6 +11,8 @@ const QuizSInglePage = () => {
 
     const quizdata = useLoaderData().data
 
+    console.log(quizdata)
+
     const { logo, name, questions, total } = quizdata
 
     return (
@@ -28,7 +30,7 @@ const QuizSInglePage = () => {
                 </Row>
                 <div className='py-5'>
                     {
-                        questions.map(quiz => <QuizItem key={quiz.id} data={quiz}/>)
+                        questions.map((quiz,i) => <QuizItem key={quiz.id} index={i} data={quiz}/>)
                     }
                 </div>
             </Container>

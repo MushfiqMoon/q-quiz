@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from "lottie-react";
-import exams from "./exams.json";
+import exams from "../assets/exams.json";
 
 
 
