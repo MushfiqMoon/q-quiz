@@ -13,7 +13,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand>
                         <Link to='/' className="text-white text-decoration-none">
-                            <img src="./logo.png" width="50" alt="logo" /> QUIZ
+                            <img src="./logo.png" width="50" alt="Q" /> QUIZ
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
