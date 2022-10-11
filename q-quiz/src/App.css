@@ -29,6 +29,41 @@
     transform: translateY(2px);
 }
 
+/* Quiz Style  */
+.q-radio-field {
+    display: flex;
+    height: 100px;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.q-radio-field input[type=radio] {
+    -webkit-appearance: none;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: solid 5px rgb(233, 233, 233);
+    border-radius: 6px;
+    padding: 35px;
+    transition: 0.5s all ease;
+}
+
+.q-radio-field label {
+    font-size: 16px;
+    color: rgb(37, 50, 98);
+    font-weight: bold;
+    padding-left: 20px
+}
+
+.q-radio-field input[type=radio]:checked {
+    border-color: var(--primary);
+}
+
 @media screen and (max-width: 992px) {
 
     .qt-hero {
