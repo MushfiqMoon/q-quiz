@@ -6,9 +6,16 @@
     padding: 10px 20px;
 }
 
-/* .q-header .menu:hover, */
+.q-header .menu:hover,
 .q-header .menu.active {
     color: var(--primary);
+}
+
+/* Quiz Questions */
+.questions p {
+    color: var(--primary);
+    font-size: 20px;
+    font-style: italic;
 }
 
 

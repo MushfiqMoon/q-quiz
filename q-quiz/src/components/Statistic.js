@@ -11,7 +11,7 @@ const Statistic = () => {
 
     console.log(data)
     return (
-        <Container>
+        <Container className='mb-5'>
             <div className='text-center my-5'>
             <h3 className='text-center t-primary qt-hero'>Questions Statistic</h3>
                 <p>See from the Graph how much questions are avilabel on each Topics</p>
