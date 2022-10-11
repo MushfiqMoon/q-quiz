@@ -14,7 +14,7 @@ const QuizItem = ({ data }) => {
 
     const notify = () => toast.success(correctAnswer, {
         position: "bottom-center",
-        autoClose: 1000,
+        autoClose: 800,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -25,7 +25,7 @@ const QuizItem = ({ data }) => {
 
     console.log(data)
     return (
-        <div className='mb-3'>
+        <div className='p-4 bg-dark text-white rounded-4 shadow  mb-3 ' >
             <article>
                 <Row>
                     <Col xs={10}>
