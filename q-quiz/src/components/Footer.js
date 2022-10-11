@@ -11,7 +11,7 @@ const Footer = () => {
                 <p className="col-md-4 mb-0 text-white">&copy; 2022 Mushfiq</p>
 
                 <a href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-white text-decoration-none">
-                    <img src="./logo.png" width="50" alt="Q" /> QUIZ
+                    <img src="/logo.png" width="50" alt="Q" /> QUIZ
                 </a>
 
                 <ul className="nav col-md-4 justify-content-end">

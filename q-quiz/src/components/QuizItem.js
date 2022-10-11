@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     Row,
     Col,
@@ -50,7 +50,7 @@ const QuizItem = ({ data, index }) => {
             <article>
                 <Row>
                     <Col xs={10}>
-                        <span class="badge bg-info mb-2 fs-6">Quiz {index + 1}</span>
+                        <span className="badge bg-info mb-2 fs-6">Quiz {index + 1}</span>
                         <div className='questions fs-4 fw-bold'
                             dangerouslySetInnerHTML={{ __html: question }}
                         />
@@ -61,20 +61,20 @@ const QuizItem = ({ data, index }) => {
                 </Row>
             </article>
 
-            <div className="donation-form">
+            <form className="donation-form">
                 <Row>
                     {
                         options.map((option, index) =>
                             <Col md={6} key={index}>
                                 <div className="q-radio-field">
-                                    <input className="op-1" type="radio" name="option" value={option} onChange={e => e.target.value === correctAnswer ? correctAns() : wrongAns()} />
-                                    <label htmlFor="quiz">{option}</label>
+                                    <input type="radio" name="option" value={option} onChange={e => e.target.value === correctAnswer ? correctAns() : wrongAns()} />
+                                    <label htmlFor={option}>{option}</label>
                                 </div>
                             </Col>
                         )
                     }
                 </Row>
-            </div>
+            </form>
             <ToastContainer />
 
         </div>

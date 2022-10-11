@@ -11,8 +11,6 @@ const QuizSInglePage = () => {
 
     const quizdata = useLoaderData().data
 
-    console.log(quizdata)
-
     const { logo, name, questions, total } = quizdata
 
     return (
