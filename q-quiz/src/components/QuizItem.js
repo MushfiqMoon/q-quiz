@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Row,
     Col,
@@ -8,7 +8,9 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const QuizItem = ({ data, index }) => {
+const QuizItem = ({ data, index, handleScore }) => {
+
+
 
     const { correctAnswer, options, question } = data;
 
@@ -45,8 +47,12 @@ const QuizItem = ({ data, index }) => {
         theme: "dark",
     });
 
+
+
+    // console.log(correct, wrong)
+
     return (
-        <div className='p-4 bg-white rounded-4 shadow  my-4' >
+        <div className="p-4 bg-white rounded-4 shadow  my-4" >
             <article>
                 <Row>
                     <Col xs={10}>
@@ -61,7 +67,7 @@ const QuizItem = ({ data, index }) => {
                 </Row>
             </article>
 
-            <form className="donation-form">
+            <form className="donation-form" onClick={e => handleScore(e, correctAnswer)}>
                 <Row>
                     {
                         options.map((option, index) =>

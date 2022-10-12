@@ -19,7 +19,7 @@ p {
 }
 
 .t-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .qt-hero {
